@@ -1,0 +1,311 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    color: #3d3b3b;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Barra superior negra */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: white;
+    padding: 15px 20px;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.login-register a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Contenedor Principal */
+.container {
+    display: flex;
+    flex: 1;
+    margin-top: 50px;
+}
+
+/* Barra Lateral  */
+.sidebar {
+    width: 250px;
+    background: #f2f2f2;
+    color: black;
+    padding: 20px;
+    height: calc(100vh - 50px);
+    position: fixed;
+    top: 20px;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+}
+
+/* Navegación  */
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar nav ul li:first-child { 
+    margin-top: 15px; 
+}
+
+.sidebar nav ul li {
+    margin: 5px 0;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar nav ul li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.sidebar nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 0;
+    font-size: 16px;
+}
+
+.sidebar nav ul li a:hover {
+    background: #dcdcdc;
+    border-radius: 5px;
+}
+
+
+/* Contenido Principal */
+.content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+}
+
+
+.content h1 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.content p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Filtros (Botones más grandes y separados) */
+.filters {
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: white;
+    color: black;
+    padding: 12px 18px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filter-btn:hover {
+    background: #f0f0f0;
+}
+
+
+
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 100px; 
+}
+
+/* Reducir tamaño de los posts */
+.post {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+    max-width: 100%; 
+    font-size: 14px; 
+}
+
+
+.post img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; 
+    border-radius: 5px;
+}
+
+
+.post:nth-child(odd) {
+    background: #beb9b9; 
+}
+
+.post:nth-child(even) {
+    background: white; 
+}
+
+
+
+/* Etiquetas de los posts alineadas a la izquierda */
+.tags {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.tag {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 10px;
+    margin: 5px 3px;
+    font-size: 14px;
+}
+
+
+.post button {
+   
+    color: black;       
+    padding: 10px 15px; 
+    border: 1px solid black; 
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    display: block;
+    font-weight: bold;
+    margin-top: 15px; 
+}
+
+
+.post button:hover {
+    background: #f0f0f0;
+}
+
+
+/* Footer  */
+.footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* RESPONSIVE: Estilos para MÓVIL */
+@media (max-width: 768px) {
+    /* Ocultar la barra lateral en móvil */
+    .sidebar {
+        display: none;
+    }
+
+    /* Mostrar menú hamburguesa */
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 15px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        color: white;
+    }
+
+    /* Menú lateral en móvil */
+    .sidebar-mobile {
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        width: 250px;
+        height: calc(100vh - 50px);
+        background: #EAEAEA;
+        padding: 20px;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .sidebar-mobile.active {
+        left: 0;
+    }
+
+    /* Botón para cerrar el menú */
+    .close-menu {
+        font-size: 24px;
+        cursor: pointer;
+        color: black;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    /* Ajustar contenido en móvil */
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    /* Filtros alineados correctamente en móvil */
+    .filters {
+        justify-content: center;
+    }
+
+    /* Posts en una sola columna en móvil */
+    .posts-container {
+        grid-template-columns: 1fr;
+    }
+}

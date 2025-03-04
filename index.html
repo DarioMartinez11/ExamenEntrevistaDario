@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowmadmood Dario Prueba</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Barra superior negra -->
+    <header class="topbar">
+        <div class="logo">Knowmadmood</div>
+        <div class="login-register">
+            <a href="#">Login</a> | <a href="#">Register</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Barra lateral fija -->
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li>
+                        <img src="assets/images/casa.png" alt="Home">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/about.png" alt="About">
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <img src="assets/images/cont.png" alt="Contact">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <h1>Home</h1>
+            <p>Welcome to the home page</p>
+
+          
+            <section class="filters">
+                <button class="filter-btn" onclick="filterPosts('all')">All posts</button>
+                <button class="filter-btn" onclick="filterPosts('art')">Art</button>
+                <button class="filter-btn" onclick="filterPosts('development')">Development</button>
+                <button class="filter-btn" onclick="filterPosts('lifestyle')">Lifestyle</button>
+                <button class="filter-btn" onclick="filterPosts('accessories')">Accessories</button>
+            </section>
+
+          
+            <h1 class="latest-posts-title">Latest Posts</h1>
+
+            <!-- Posts -->
+            <section class="posts-container">
+                <article class="post" data-category="art development">
+                    <img src="assets/images/img1.png" alt="Post 1">
+                    <h3>Post 1</h3>
+                    <div class="tags">
+                        <span class="tag">Art</span>
+                        <span class="tag">Development</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <button>Read more</button>
+                </article>
+
+                <article class="post" data-category="lifestyle art">
+                    <img src="assets/images/img2.png" alt="Post 2">
+                    <h3>Post 2</h3>
+                    <div class="tags">
+                        <span class="tag">Lifestyle</span>
+                        <span class="tag">Art</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    <button>Read more</button>
+                </article>
+
+                <article class="post" data-category="development">
+                    <img src="assets/images/img3.png" alt="Post 3">
+                    <h3>Post 3</h3>
+                    <div class="tags">
+                        <span class="tag">Development</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur. </p>
+                    <button>Read more</button>
+                </article>
+
+                <article class="post" data-category="accessories lifestyle">
+                    <img src="assets/images/img4.png" alt="Post 4">
+                    <h3>Post 4</h3>
+                    <div class="tags">
+                        <span class="tag">Accessories</span>
+                        <span class="tag">Lifestyle</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
+                    <button>Read more</button>
+                </article>
+
+                <article class="post" data-category="development art">
+                    <img src="assets/images/img5.png" alt="Post 5">
+                    <h3>Post 5</h3>
+                    <div class="tags">
+                        <span class="tag">Development</span>
+                        <span class="tag">Art</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.Lorem ipsum dolor sit amet consectetur.</p>
+                    <button>Read more</button>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2025 Knowmadmood
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

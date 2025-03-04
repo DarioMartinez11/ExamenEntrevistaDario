@@ -1,0 +1,57 @@
+@import "variables";
+@import "mixins";
+
+@include responsive(mobile) {
+    .sidebar {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 15px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        color: white;
+    }
+
+    .sidebar-mobile {
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        width: $sidebar-width;
+        height: calc(100vh - 50px);
+        background: $color-secondary;
+        padding: 20px;
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+
+        &.active {
+            left: 0;
+        }
+    }
+
+    .close-menu {
+        font-size: 24px;
+        cursor: pointer;
+        color: $color-text;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .filters {
+        justify-content: center;
+    }
+
+    .posts-container {
+        grid-template-columns: 1fr;
+    }
+}
